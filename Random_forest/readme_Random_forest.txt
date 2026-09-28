@@ -27,7 +27,7 @@ The model is composed of a random forest algorithm, which is a predictive modell
 
 ## Training the model
 
-The data set is split in two parts: a traning set that is used to build the random forest algorithm and contains 80% of the total data set selected randomly (i.e. parameters from 1156 periodograms), and a test set consisting of remaining 20% of the total data set (i.e. parameters from 290 periodograms) that is used to assess the performance of the algorithm by comparing the predicted values with the actual input values.
+The data set is split in two parts: a training set that is used to build the random forest algorithm and contains 80% of the total data set selected randomly (i.e. parameters from 1156 periodograms), and a test set consisting of remaining 20% of the total data set (i.e. parameters from 290 periodograms) that is used to assess the performance of the algorithm by comparing the predicted values with the actual input values.
 
 
 ### Results
