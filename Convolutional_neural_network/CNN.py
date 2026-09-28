@@ -14,7 +14,7 @@ from keras import Input                                     # Input is a class t
 from keras.layers import Dense, Dropout, Flatten            # Dense is a class representing a fully connected layer in our model; Dropout is a class applying dropout regularization to our model, which helps prevent overfitting;
 							    # Flatten is a class flattening the output of a previous layer into a 1D array, which can then be passed to a fully connected layer.
 from keras.layers import Conv1D, MaxPooling1D               # Conv1D is a class representing a 1D convolutional layer in our model ; MaxPooling1D is a class applying max pooling to the output of a previous layer, which helps reducing the spatial dimensions of the data.
-from keras.layers import BatchNormalization                 # BatchNormalization is a class applying batch normalization to the output of a previous layer, which helps improve the stability and speed of training.
+from keras.layers import BatchNormalization                 # BatchNormalization is a class applying batch normalization to the output of a previous layer, which helps improve the stability and speed of the training.
 from keras.layers import LeakyReLU                          # LeakyReLU is a class applying the leaky rectified linear activation function to the output of a previous layer, which helps prevent the "dying ReLU" problem and can improve the performance of the model.
 from tensorflow.keras.layers import Activation		    # Activation is a class applying an activation function to the output of a previous layer
 
@@ -121,6 +121,7 @@ train_set, test_set, train_label, test_label = train_test_split(combined_FFT_sig
 train_set_core, valid_set, train_label_core, valid_label = train_test_split(train_set, train_label, test_size=0.2, random_state=13)			# core train set: 80% of the train set; validation set: 20% of the train set
 
 
+
 ### Configuring, training and saving the convolutional neural network model
 
 inputShape = (number_timesteps, number_features)
@@ -199,6 +200,7 @@ plt.title('Training and validation mean squared error')
 plt.legend()
 plt.savefig('Training_validation_MSE.pdf', format='pdf')
 plt.close()
+
 
 
 ### Predicting the desired parameters through machine learning using a convolutional neural network
